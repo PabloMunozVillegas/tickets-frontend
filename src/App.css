@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Contenedor principal de la aplicación */
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Fondo claro para la aplicación */
 }
 
-.App-link {
-  color: #61dafb;
+/* Asegura que el contenedor de FotoCapture se ajuste */
+.foto-capture-container {
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta desbordes */
+  background: #fff; /* Fondo blanco para el contenedor de captura */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media queries para mejorar la responsividad */
+
+/* Para pantallas grandes (desktops) */
+@media (min-width: 1200px) {
+  .foto-capture-container {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .foto-capture-container {
+    width: 90%;
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .foto-capture-container {
+    width: 95%;
+    padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
   }
 }

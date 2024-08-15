@@ -1,0 +1,20 @@
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  display: none;
+}
+
+.carousel .carousel-status {
+  @apply hidden;
+}
+
+.carousel .control-dots {
+  @apply flex justify-center mt-2;
+}
+
+.carousel .control-dots .dot {
+  @apply w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer transition-opacity duration-300 ease-in-out;
+}
+
+.carousel .control-dots .dot.selected {
+  @apply bg-gray-700;
+}
